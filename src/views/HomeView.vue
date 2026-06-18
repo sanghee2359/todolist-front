@@ -46,33 +46,4 @@ const resetSearch = () => {
 // 할일 목록에서 삭제 
 const deleteTodo = (id) => todoStore.deleteTodoItem(id)
 
-onMounted(() => {
-  console.log('마운트 시 todolist:', todolist.value)
-})
 </script>
-
-<style scoped>
-/* ===== Scroll section ===== */
-.todo-wrap {
-  margin-top: 12px;
-}
-
-/* 10개 초과 시에만 스크롤 */
-.todo-wrap.scroll {
-  max-height: 520px;     
-  overflow-y: auto;
-  padding-right: 6px;    /* 스크롤바 생길 때 내용 밀림 방지 */
-}
-
-/* 스크롤바 - 크롬/엣지 */
-.todo-wrap.scroll::-webkit-scrollbar {
-  width: 8px;
-}
-.todo-wrap.scroll::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.15);
-  border-radius: 999px;
-}
-.todo-wrap.scroll::-webkit-scrollbar-track {
-  background: transparent;
-}
-</style>
